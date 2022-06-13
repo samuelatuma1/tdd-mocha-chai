@@ -23,10 +23,17 @@ function isPrime(num){
     return true
 }
 
-console.log(isPrime(2))
+/**
+ * 
+ * @param {String} name : string representation of the name
+ * @param {Number} age : number representaion of the age
+ * @returns {object} the name and age encapsulated in an object
+ */
+const encapsulate = (name , age) =>{return {name, age}}
 
 
+console.log(encapsulate('sam', 12))
 module.exports = {
-    addNums, isPrime
+    addNums, isPrime, encapsulate
 }
 
