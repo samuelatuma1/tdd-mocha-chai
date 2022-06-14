@@ -41,7 +41,19 @@ function dfs(users, start, end){
 
     return null
 }
-console.log(dfs(users, 'a', 'e'))
+
+function recursive_dfs(users, start, end){
+    if(start[0] === end[0]) {
+        console.log("found search", start)
+    } else{
+        console.log(start)
+    }
+    let curr = users[start]
+    for(let child of curr ){
+        recursive_dfs(users, child, end)
+    }
+}
+// recursive_dfs(users, 'a', 'e')
 module.exports = {
-    users
+    users, dfs
 }

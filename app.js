@@ -16,9 +16,7 @@ function addNums(a , b){
  */
 function isPrime(num){
     for(let idx = 2; idx < (num ** 0.5) + 0.00001; idx++){
-        if (num % idx === 0){
-            return false
-        }
+        if (num % idx === 0) return false;  
     }
     return true
 }
@@ -30,6 +28,8 @@ function isPrime(num){
  * @returns {object} the name and age encapsulated in an object
  */
 const encapsulate = (name , age) =>{return {name, age}}
+
+
 
 
 console.log(encapsulate('sam', 12))

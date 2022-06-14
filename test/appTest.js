@@ -1,5 +1,6 @@
 const {assert} = require("chai")
 const {addNums, isPrime} = require("../app.js")
+const {users, dfs} = require('../depth_first.js')
 
 describe("App", function(){
     it("should return true if it sums up data correctly", function (){
@@ -10,11 +11,8 @@ describe("App", function(){
     });
 })
 
-describe("Depth First", function(){
-    it("should return true if both recursive and plain depth forst returns the same data", () => {
-        assert.equal(2, 2)
-    })
-    it("Should return true if objects are deep equals", () => {
-        assert.deepEqual({name : "sam"}, {"name" : "sam"})
+describe("Depth First Search", () => {
+    it("Should return da over d based on the search", () => {
+        assert.equal(dfs(users, 'a', 'd'), 'da')
     })
 })
